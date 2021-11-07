@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  cigarette-machine-php:
+    image: cigarette-machine/php
+    build:
+      context: .
+      dockerfile: Dockerfile
+      cache_from:
+        - cigarette-machine/php
+# You can add the volumes for development purposes
+#    volumes:
+#      - $PWD:/www:rw,cached
+    command: sh
